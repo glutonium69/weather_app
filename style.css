@@ -91,4 +91,17 @@ body{
 	& span{
 		flex-grow: 1;
 	}
+
+	.img{
+		margin-right: var(--side-margin);
+		flex-grow: 1;
+		display: flex;
+		
+		& svg{
+			height: 150px;
+			min-height: 50px;
+			align-self: center;
+			margin-inline: auto;
+		}
+	}
 }
