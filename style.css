@@ -50,6 +50,23 @@ body{
 			display: grid;
 			grid-template: 0.5fr 1fr 1fr / repeat(3, 1fr);
 			gap: 1rem;
+
+			& div{
+				border-radius: 1rem;
+			}
+			
+			& > div:not(.temp){
+				background-color: #202b3b;
+			}
+
+			& > div:not(.weeklyForecast){
+				grid-column: 1 / 3;
+			}
+
+			.weeklyForecast{
+				grid-column: 3 ;
+				grid-row: 1 / 4;
+			}
 		}
 	}
 }
