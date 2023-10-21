@@ -19,5 +19,14 @@ body{
     height: calc(100vh - var(--side-gap));
     margin-inline: auto;
     gap: 1rem;
+
+    .nav{
+        flex-grow: 1;
+        border-radius: 2rem;
+    }
+
+    .searchAndMain{
+        flex-grow: 9;
+    }
 }
 
