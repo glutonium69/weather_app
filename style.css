@@ -16,7 +16,7 @@ body{
 }
 
 .wrapper{
-	--side-gap : max(2rem, 15px);
+	--side-gap : max(1rem, 15px);
 
 	display: flex;
 	width: max(calc(100vw - var(--side-gap)), 300px);
@@ -25,9 +25,10 @@ body{
 	gap: 1rem;
 
 	.nav{
+		background-color: #202b3b;
 		flex-grow: 1;
 		min-width: 40px;
-		border-radius: 2rem;
+		border-radius: 1rem;
 	}
 
 	.searchAndMain{
