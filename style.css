@@ -70,3 +70,9 @@ body{
 		}
 	}
 }
+
+.temp{
+	--side-margin : 0rem;
+
+	display: flex;
+}
