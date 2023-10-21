@@ -38,8 +38,10 @@ body{
 		gap: 1rem;
 		
 		.search{
-			width: max(70%, 200px);
+			background-color: #202b3b;
+			width: max(66%, 200px);
 			height: 50px;
+			min-height: 25px;
 			border-radius: 0.8rem;
 		}
 
@@ -48,4 +50,3 @@ body{
 		}
 	}
 }
-
