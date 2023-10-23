@@ -97,6 +97,7 @@ body{
 		
 		& p{
 			font-size: clamp(0.625rem, 0.455rem + 0.852vw, 1rem);
+			color: #9b9fa5;
 		}
 	}
 
@@ -117,7 +118,7 @@ body{
 .dailyForecast{
 	display: flex;
 	flex-direction: column;
-	padding: 1rem;
+	padding: 1.5rem;
 	gap: 0.5rem;
 
 	& p{
