@@ -80,6 +80,7 @@ body{
 	--side-margin : 0rem;
 
 	display: flex;
+	text-transform: capitalize;
 	
 	& *{
 		width: 70%;
@@ -112,7 +113,9 @@ body{
 		display: flex;
 		
 		& img{
-			height: 150px;
+			background-color:#1c314e6e;
+			border-radius: 50%;
+			width: 150px;
 			min-height: 50px;
 			align-self: center;
 			margin-inline: auto;
@@ -161,7 +164,7 @@ body{
 			place-items: center;
 			
 			& img{
-				width: 40%;
+				width: 100%;
 			}
 		}
 	}
