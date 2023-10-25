@@ -12,15 +12,20 @@ body{
 	background-color: #0b131e;
 	display: grid;
 	place-items: center;
+	min-height: 100dvh;
 	min-height: 100vh;
 }
 
 .wrapper{
 	--side-gap : max(1rem, 15px);
 
-	display: flex;
+	width: max(calc(100dvw - var(--side-gap)), 300px);
+	height: max(calc(100dvh - var(--side-gap)), 200px);
+	
 	width: max(calc(100vw - var(--side-gap)), 300px);
 	height: max(calc(100vh - var(--side-gap)), 200px);
+	
+	display: flex;
 	margin-inline: auto;
 	gap: 1rem;
 
