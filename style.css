@@ -49,6 +49,7 @@ body{
 			min-height: 25px;
 			border-radius: 0.8rem;
 			overflow: hidden;
+			position: relative;
 
 			& input{
 				width: 100%;
@@ -66,6 +67,27 @@ body{
 			&:has(input:focus),
 			& input:focus{
 				outline: solid 0.2rem rgba(255, 255, 255, 0.74);
+			}
+
+
+			.search_icon{
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 10%;
+				height: 100%;
+				display: grid;
+				place-items: center;
+				cursor: pointer;
+				background-color: #121a27;
+
+				&:hover{
+					background-color: #0e131b;
+				}
+				
+				& img{
+					height: 50%;
+				}
 			}
 		}
 
