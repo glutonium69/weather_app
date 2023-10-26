@@ -191,7 +191,12 @@ body{
 		font-weight: 1000;
 		letter-spacing: 0.1rem;
 		color: #9b9fa5;
+		font-weight: bold;
 	}
+}
+
+
+.dailyForecast{
 
 	.info{
 		flex-grow: 1;
