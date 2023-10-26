@@ -229,3 +229,22 @@ body{
 		}
 	}
 }
+
+
+.airCondition{
+
+	& > div{ background-color: #dde0e5;}
+
+	.topSection{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		
+		.seeMore{
+			background-color: #0095ff;
+			border: none;
+			padding: 0.1rem 0.5rem;
+			border-radius: 100vh;
+		}
+	}
+}
