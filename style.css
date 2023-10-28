@@ -252,6 +252,10 @@ body{
 		color: #9b9fa5;
 		font-weight: bold;
 	}
+
+	& h3{
+		font-size: clamp(0.625rem, 0.236rem + 1.038vw, 1.17rem);
+	}
 }
 
 
