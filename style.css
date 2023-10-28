@@ -112,10 +112,10 @@ body{
 		.main{
 			flex-grow: 1;
 			display: grid;
-			grid-template: 0.5fr 1fr 1fr / repeat(3, 1fr);
-			gap: 1rem;
+			grid-template: 1fr 0.9fr 0.7fr / repeat(3, 1fr);
+			gap: var(--gap);
 
-			& div{
+			& > div{
 				border-radius: 1rem;
 			}
 			
