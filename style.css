@@ -65,14 +65,44 @@ body{
 		flex-direction: column;
 		gap: var(--gap);
 		
+		
 		.search{
 			--border-radius : 0.8rem;
 
 			width: max(66%, 200px);
 			min-height: 50px;
 			display: flex;
+			position: relative;
 			
 
+			.pop-up{
+				display: none;
+				position: absolute;
+				bottom: 0;
+				right: 5%;
+				translate: 0 105%;
+				text-align: center;
+				background-color: #353d47;
+				border-radius: var(--border-radius);
+				color: #ec542d;
+				padding: 1rem;
+
+				&::before{
+					--border-width : 30px;
+
+					content: "";
+					position: absolute;
+					height: 0;
+					width: 0;
+					border-right: solid var(--border-width) transparent;
+					border-bottom: solid var(--border-width) #353d47;
+					top: 0;
+					right: 10%;
+					scale: -1 1;
+					translate: 0 -95%;
+				}
+			}
+			
 			& input:focus,
 			.search_icon:focus{
 				outline: solid 0.15rem rgba(255, 255, 255, 0.74);
