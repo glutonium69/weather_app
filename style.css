@@ -253,4 +253,24 @@ body{
 			border-radius: 100vh;
 		}
 	}
+
+	.bottomSection{
+		height: 100%;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+
+		& > div{
+			background-color: #031530;
+			display: flex;
+			outline: solid 0.1px red;
+
+			.icon{
+				flex-grow: 1;
+			}
+
+			.info{
+				flex-grow: 1;
+			}
+		}
+	}
 }
