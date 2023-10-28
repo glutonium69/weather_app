@@ -260,16 +260,28 @@ body{
 		grid-template-columns: repeat(4, 1fr);
 
 		& > div{
-			background-color: #031530;
 			display: flex;
-			outline: solid 0.1px red;
+			justify-content: center;
+			align-items: center;
+			gap: var(--gap);
+
+			& div{
+				height: 40%;
+			}
 
 			.icon{
-				flex-grow: 1;
+
+				& img{
+					display: block;
+					margin-left: auto;
+					height: 100%;
+				}
 			}
 
 			.info{
-				flex-grow: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
 			}
 		}
 	}
