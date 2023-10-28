@@ -16,6 +16,27 @@ body{
 	min-height: 100vh;
 }
 
+
+.loader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 0%;
+	height: 5px;
+	border-radius: 100vh;
+	background-color: rgb(241, 241, 74);
+	animation: load linear infinite;
+	animation-duration: 5s;
+}
+
+
+@keyframes load{
+	to{
+		min-width: 50%;
+		left: 110%;
+	}
+}
+
 .wrapper{
 	--side-gap : max(1rem, 15px);
 	--gap : 0.5rem;
