@@ -18,6 +18,7 @@ body{
 
 .wrapper{
 	--side-gap : max(1rem, 15px);
+	--gap : 0.5rem;
 
 	width: max(calc(100dvw - var(--side-gap)), 300px);
 	height: max(calc(100dvh - var(--side-gap)), 200px);
@@ -27,7 +28,7 @@ body{
 	
 	display: flex;
 	margin-inline: auto;
-	gap: 1rem;
+	gap: var(--gap);
 
 	.nav{
 		background-color: #202b3b;
@@ -40,7 +41,7 @@ body{
 		flex-grow: 9;
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+		gap: var(--gap);
 		
 		.search{
 			background-color: #202b3b;
@@ -139,6 +140,7 @@ body{
 
 	display: flex;
 	text-transform: capitalize;
+	padding-block: 1rem;
 	
 	& *{
 		width: 70%;
@@ -205,6 +207,7 @@ body{
 		flex-grow: 1;
 		display: flex;
 		justify-content: space-between;
+		padding-inline: 1rem;
 
 		.data{
 			text-align: center;
@@ -232,8 +235,6 @@ body{
 
 
 .airCondition{
-
-	& > div{ background-color: #dde0e5;}
 
 	.topSection{
 		display: flex;
