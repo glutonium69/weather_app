@@ -16,24 +16,25 @@ body{
 	min-height: 100vh;
 }
 
-
-.loader{
+#loader{
 	position: fixed;
 	top: 0;
 	left: 0;
-	min-width: 0%;
+	width: 20vw;
 	height: 5px;
 	border-radius: 100vh;
 	background-color: rgb(241, 241, 74);
-	animation: load linear infinite;
-	animation-duration: 5s;
+	translate: -100% 0;
+}
+
+.loader{
+	animation: load 2s linear infinite;
 }
 
 
 @keyframes load{
 	to{
-		min-width: 50%;
-		left: 110%;
+		translate: 600% 0;
 	}
 }
 
