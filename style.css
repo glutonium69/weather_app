@@ -90,9 +90,15 @@ body{
 
 				&:hover,
 				&:focus{
+					border: transparent;
+					outline: transparent;
 
 					&  p{
 						color: #dde0e5;
+
+						&::before{
+							min-width: 110%;
+						}
 					}
 				}
 
@@ -101,8 +107,22 @@ body{
 					text-transform: capitalize;
 					font-size: clamp(0.5rem, 0.423rem + 0.364vw, 0.75rem);
 					letter-spacing: 0.1rem;
-					color: #9b9fa5;
+					color: #dde0e5;
 					font-weight: bold;
+					position: relative;
+
+					&::before{
+						content: "";
+						position: absolute;
+						height: 3px;
+						min-width: 0%;
+						background: #9b9fa5;
+						border-radius: 100vh;
+						left: -5%;
+						bottom: 0;
+						translate: 0 100%;
+						transition: 300ms;
+					}
 				}
 
 				.icon{
