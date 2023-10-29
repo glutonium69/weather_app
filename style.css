@@ -469,4 +469,20 @@ body{
 /* media query for tablet size device */
 @media screen and (width <= 768px){
 	
+	.dailyForecast,
+	.airCondition,
+	.weeklyForecast{
+		padding-inline: 0.8rem;
+	}
+
+	.airCondition {
+		.bottomSection {
+			grid-template: 1fr 1fr / 1fr 1fr;
+			
+			& > div:nth-child(even){
+				display: flex;
+				padding-left: 1rem;
+			}
+		}
+	}
 }
