@@ -348,3 +348,27 @@ body{
 		}
 	}
 }
+
+.weeklyForecast{
+
+	& > p{
+		text-align: center;
+	}
+
+	.info{
+		flex-direction: column;
+		
+		.data{
+			width: 100%;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		& > div:not(.data){
+			width: 90%;
+			margin-inline: auto;
+			height: 1px;	
+		}
+	}
+}
