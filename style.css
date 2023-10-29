@@ -434,6 +434,7 @@ body{
 }
 
 .weeklyForecast{
+	padding-inline: 0;
 
 	& > p{
 		text-align: center;
