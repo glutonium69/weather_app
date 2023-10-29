@@ -508,4 +508,15 @@ body{
 			}
 		}
 	}
+
+	#temp,
+	#dailyForecast,
+	#airCondition,
+	#weeklyForecast {
+		grid-column: 1 / 4;
+	}
+
+	#weeklyForecast {
+		grid-row: 4;
+	}
 }
