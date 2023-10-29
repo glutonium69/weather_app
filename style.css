@@ -60,10 +60,20 @@ body{
 		
 		.container{
 			height: 65%;
+			/* outline: solid 2px cyan; */
 			margin-top: 1.5rem;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			
+			> .icon{
+				width: 65%;
+				aspect-ratio: 1;
+				background-color: #35455e;
+				overflow: hidden;
+				padding: 0.3rem;
+				border-radius: 0.8rem;
+			}
 		}
 	}
 
