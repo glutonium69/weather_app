@@ -67,14 +67,15 @@ body{
 			align-items: center;
 			gap: 1rem;
 			
-			> .icon{
+			.icon{
 				width: 65%;
 				aspect-ratio: 1;
 				background-color: #35455e;
 				overflow: hidden;
 				padding: 0.3rem;
 				border-radius: 0.8rem;
-			}
+				margin-inline: auto;
+			}			
 		}
 	}
 
