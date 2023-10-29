@@ -435,9 +435,13 @@ body{
 		
 		.data{
 			width: 100%;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-around;
+			display: grid;
+			grid-template-columns: repeat(3, 50px);
+
+			& > *{
+				display: grid;
+				place-items: center;
+			}
 		}
 
 		& > div:not(.data){
