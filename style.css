@@ -99,7 +99,10 @@ body{
 				}
 
 				.icon{
+					width: 40px;
 					background-color: transparent;
+					border-radius: 0;
+					overflow: visible;
 				}
 			}
 		}
