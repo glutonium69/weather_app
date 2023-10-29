@@ -43,8 +43,6 @@ body{
 	--gap : 0.5rem;
 
 	width: max(calc(100dvw - var(--side-gap)), 300px);
-	height: calc(100dvh - var(--side-gap));
-	
 	width: max(calc(100vw - var(--side-gap)), 300px);
 	height: calc(100vh - var(--side-gap));
 	
