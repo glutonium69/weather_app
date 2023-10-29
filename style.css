@@ -59,7 +59,6 @@ body{
 		border-radius: 1rem;
 		
 		.container{
-			height: 65%;
 			margin-top: 1.5rem;
 			display: flex;
 			flex-direction: column;
