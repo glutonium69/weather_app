@@ -87,6 +87,7 @@ body{
 				}
 
 				& p{
+					text-align: center;
 					text-transform: capitalize;
 					font-size: clamp(0.5rem, 0.423rem + 0.364vw, 0.75rem);
 					letter-spacing: 0.1rem;
