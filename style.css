@@ -57,7 +57,6 @@ body{
 		
 		.container{
 			height: 65%;
-			/* outline: solid 2px cyan; */
 			margin-top: 1.5rem;
 			display: flex;
 			flex-direction: column;
@@ -66,9 +65,9 @@ body{
 			
 			.icon{
 				width: 65%;
-				aspect-ratio: 1;
+				display: grid;
 				background-color: #35455e;
-				overflow: hidden;
+				place-items: center;
 				padding: 0.3rem;
 				border-radius: 0.8rem;
 				margin-inline: auto;
