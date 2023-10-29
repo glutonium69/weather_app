@@ -244,7 +244,7 @@ body{
 		.main{
 			flex-grow: 1;
 			display: grid;
-			grid-template: 1fr 0.9fr 0.7fr / repeat(3, 1fr);
+			grid-template: repeat(3, auto) / repeat(3, 1fr);
 			gap: var(--gap);
 
 			& > div{
