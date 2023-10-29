@@ -76,11 +76,19 @@ body{
 				border-radius: 0.8rem;
 				margin-inline: auto;
 			}
-				
+
 			.weather,
 			.cities,
 			.map,
 			.settings{
+
+				& p{
+					text-transform: capitalize;
+					font-size: clamp(0.5rem, 0.423rem + 0.364vw, 0.75rem);
+					letter-spacing: 0.1rem;
+					color: #9b9fa5;
+					font-weight: bold;
+				}
 
 				.icon{
 					background-color: transparent;
