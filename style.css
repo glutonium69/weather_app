@@ -520,3 +520,8 @@ body{
 		grid-row: 4;
 	}
 }
+
+/* media query for mobile screen */
+@media screen and (width < 460) {
+	
+}
