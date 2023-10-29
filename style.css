@@ -199,7 +199,6 @@ body{
 
 	.tempInfo{
 		margin-left: var(--side-margin);
-		flex-grow: 2;
 		display: flex;
 		flex-direction: column;
 	
