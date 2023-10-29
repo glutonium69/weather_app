@@ -523,6 +523,5 @@ body{
 }
 
 /* media query for mobile screen */
-@media screen and (width < 460) {
-	
+@media screen and (width < 460px) {
 }
