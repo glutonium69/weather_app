@@ -75,7 +75,17 @@ body{
 				padding: 0.3rem;
 				border-radius: 0.8rem;
 				margin-inline: auto;
-			}			
+			}
+				
+			.weather,
+			.cities,
+			.map,
+			.settings{
+
+				.icon{
+					background-color: transparent;
+				}
+			}
 		}
 	}
 
