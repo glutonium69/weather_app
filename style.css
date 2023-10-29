@@ -151,9 +151,10 @@ body{
 		.search{
 			--border-radius : 0.8rem;
 
-			width: max(66%, 200px);
+			width: 66%;
 			min-height: 50px;
-			display: flex;
+			display: grid;
+			grid-template-columns: repeat(10, 1fr);
 			position: relative;
 			
 
@@ -192,7 +193,7 @@ body{
 			}
 			
 			& input{
-				flex-grow: 8;
+				grid-column: span 8;
 				background-color: #202b3b;
 				border: none;
 				border-radius: var(--border-radius) 0 0 var(--border-radius);
@@ -206,6 +207,7 @@ body{
 
 
 			.search_icon{
+				grid-column: span 2;
 				position: relative;
 				display: grid;
 				place-items: center;
@@ -214,7 +216,6 @@ body{
 				border-radius: 0 var(--border-radius) var(--border-radius) 0;
 				isolation: isolate;
 				overflow: hidden;
-				flex-grow: 2;
 
 				&::before{
 					content: '';
