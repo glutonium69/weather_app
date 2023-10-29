@@ -59,7 +59,7 @@ body{
 		border-radius: 1rem;
 		
 		.container{
-			height: 65%;
+			height: 60%;
 			margin-top: 1.5rem;
 			display: flex;
 			flex-direction: column;
@@ -84,6 +84,7 @@ body{
 			.cities,
 			.map,
 			.settings{
+				aspect-ratio: 1;
 
 				&:hover,
 				&:focus{
