@@ -490,4 +490,22 @@ body{
 
 @media screen and (width < 685px) {
 
+	.wrapper {
+		margin-block: var(--side-gap);
+
+		.nav {
+			height: calc(100vh - var(--side-gap) * 2);
+		}
+
+		.searchAndMain {
+
+			.search {
+				width: 100%;
+			}
+
+			.main {
+				grid-template: repeat(4, auto) / repeat(3, 1fr);
+			}
+		}
+	}
 }
