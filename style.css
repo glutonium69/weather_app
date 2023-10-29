@@ -464,3 +464,9 @@ body{
 		}
 	}
 }
+
+
+/* media query for tablet size device */
+@media screen and (width <= 768px){
+	
+}
