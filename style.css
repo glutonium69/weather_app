@@ -44,6 +44,9 @@ body{
 
 	width: max(calc(100dvw - var(--side-gap)), 300px);	
 	width: max(calc(100vw - var(--side-gap)), 300px);
+
+	min-height: calc(100vh - var(--side-gap));
+	min-height: calc(100dvh - var(--side-gap));
 	
 	display: flex;
 	margin-inline: auto;
