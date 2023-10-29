@@ -76,11 +76,19 @@ body{
 				border-radius: 0.8rem;
 				margin-inline: auto;
 			}
-
+			
 			.weather,
 			.cities,
 			.map,
 			.settings{
+
+				&:hover,
+				&:focus{
+
+					&  p{
+						color: #dde0e5;
+					}
+				}
 
 				& p{
 					text-transform: capitalize;
