@@ -379,6 +379,12 @@ body{
 }
 
 
+.dailyForecast,
+.airCondition{
+	min-width: 300px;
+}
+
+
 .airCondition{
 
 	.topSection{
