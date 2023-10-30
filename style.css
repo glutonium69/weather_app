@@ -246,7 +246,7 @@ body{
 		.main{
 			flex-grow: 1;
 			display: grid;
-			grid-template: repeat(3, auto) / repeat(3, 1fr);
+			grid-template: 160px auto auto / repeat(3, 1fr);
 			gap: var(--gap);
 
 			& > div{
