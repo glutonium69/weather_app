@@ -164,3 +164,10 @@ function getDayName(dateString) {
 	var date = new Date(dateString);
 	return date.toLocaleDateString("en-US", { weekday: "long" });
 }
+
+
+// set up the information on the page upon data being loaded when requested
+function setUpWebData() {
+	const location = input.value;
+	weatherInfo(location);
+}
