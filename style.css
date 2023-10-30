@@ -586,4 +586,14 @@ body{
 
 /* media query for mobile screen */
 @media screen and (width < 460px) {
+	
+	.wrapper {
+
+		flex-direction: column;
+
+		.nav,
+		#searchAndMain {
+			min-width: 300px;
+		}
+	}
 }
