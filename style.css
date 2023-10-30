@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
 
+:root{
+	--side-gap : max(1rem, 15px);
+	--gap : 0.5rem;
+}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -39,8 +44,6 @@ body{
 }
 
 .wrapper{
-	--side-gap : max(1rem, 15px);
-	--gap : 0.5rem;
 
 	width: max(calc(100dvw - var(--side-gap)), 300px);	
 	width: max(calc(100vw - var(--side-gap)), 300px);
