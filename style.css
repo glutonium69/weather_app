@@ -392,12 +392,14 @@ body{
 
 .dailyForecast,
 .airCondition{
+	--side-padding : 1.5rem;
 	min-width: 300px;
-	padding-inline: 1.5rem;
+}
 
-	& > p,
-	& > div > p{
-		padding-left: 1rem;
+.dailyForecast{
+	padding-block: 1.1rem 0.8rem;
+	& p{
+		padding-left: var(--side-padding);
 	}
 }
 
@@ -407,6 +409,7 @@ body{
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		padding-inline: var(--side-padding);
 		
 		.seeMore{
 			background-color: #0095ff;
