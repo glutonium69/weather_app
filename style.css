@@ -393,8 +393,13 @@ body{
 .dailyForecast,
 .airCondition{
 	min-width: 300px;
-}
+	padding-inline: 1.5rem;
 
+	& > p,
+	& > div > p{
+		padding-left: 1rem;
+	}
+}
 
 .airCondition{
 
