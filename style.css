@@ -67,7 +67,7 @@ body{
 		top: var(--side-gap);
 		
 		.container{
-			margin-top: 1.5rem;
+			margin-block: 1.5rem;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -274,7 +274,6 @@ body{
 
 	display: flex;
 	text-transform: capitalize;
-	padding-block: 1rem;
 	
 	& *{
 		width: 70%;
@@ -353,6 +352,8 @@ body{
 
 .weeklyForecast,
 .dailyForecast{
+
+	gap: 1rem;
 
 	.info{
 		flex-grow: 1;
