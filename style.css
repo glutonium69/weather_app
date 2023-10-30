@@ -339,6 +339,10 @@ body{
 		color: #9b9fa5;
 	}
 
+	& button{
+		font-size: clamp(0.5rem, 0.423rem + 0.364vw, 0.75rem);
+	}
+
 	.section-head{
 		font-weight: bold;
 	}
