@@ -15,8 +15,18 @@ async function weatherInfo(place) {
 	const url = `http://api.weatherapi.com/v1/forecast.json?key=${weatherAPI_key}&q=${place}&days=7`;
 	// fetch API response via calling to the URL
 	const res = await fetch(url);
+
+	// handle error if response is not OK
+	if (!res.ok) {
+		deactivateLoadingAnimation();
+		handlePopUp();
+		console.error("something gone wrong");
+		return 0;
+	}
+
 	// convert response to json so returned data can be accessed
 	const data = await res.json();
+	deactivateLoadingAnimation();
 
 	// calling function by passing the data as argument
 	setPlace(data);
