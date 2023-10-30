@@ -381,10 +381,10 @@ body{
 		.img{
 			display: grid;
 			place-items: center;
-			
-			& img{
-				width: 100%;
-			}
+		}
+
+		& img{
+			width: 70%;
 		}
 	}
 }
@@ -474,6 +474,10 @@ body{
 			width: 90%;
 			margin-inline: auto;
 			height: 1px;	
+		}
+
+		& img{
+			width: 100%;
 		}
 	}
 }
