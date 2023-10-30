@@ -169,6 +169,23 @@ function getDayName(dateString) {
 }
 
 
+// click listener for search
+searchIcon.addEventListener("click", () => {
+	// return if input is an empty string
+	if (input.value === "") return 0;
+
+	setUpWebData();
+});
+
+// make it searchable using enter
+window.addEventListener("keypress", (e) => {
+	// return if either Enter isn't pressed or input and search is not focused or input is an empty string
+	let condition = e.key != "Enter" || (document.activeElement != input && document.activeElement != searchIcon) || input.value === "";
+	if (condition) return 0;
+
+	setUpWebData();
+});
+
 // set up the information on the page upon data being loaded when requested
 function setUpWebData() {
 	const location = input.value;
