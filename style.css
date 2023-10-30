@@ -595,5 +595,40 @@ body{
 		#searchAndMain {
 			min-width: 300px;
 		}
+
+		.nav {
+			height: fit-content;
+			position: static;
+			border-radius: 0.7rem;
+
+			.container {
+				flex-direction: row;
+				margin: 0.1rem 0.5rem;
+
+				.icon {
+					border-radius: 0.45rem;
+					width: 30px;
+					margin: 0;
+				}
+
+				& span {
+					flex-grow: 1;
+				}
+
+				.weather,
+				.cities,
+				.map,
+				.settings {
+
+					.icon {
+						min-width: 10px;
+					}
+
+					& img {
+						max-width: 15px !important;
+					}
+				}
+			}
+		}
 	}
 }
