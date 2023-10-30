@@ -20,13 +20,14 @@ async function weatherInfo(place) {
 	setCurrentTempAndCondition(data);
 	dailyForecast(data);
 	airCondition(data);
+	weeklyForecast(data);
 
 	// print data and response to console
 	console.log(data);
 	console.log(res);
 }
 
-weatherInfo("india");
+weatherInfo("russia");
 
 
 
@@ -134,4 +135,32 @@ function airCondition(data) {
 function getHour() {
 	let date = new Date();
 	return date.getHours();
+}
+
+
+// set up the forecast of the following 6 days
+function weeklyForecast(data) {
+	// extract essential data
+	const dataArrWeekly = data.forecast.forecastday;
+	// get related element
+	const infoData = document.querySelectorAll(".weeklyForecast .info .data");
+
+	for (let i = 1; i < dataArrWeekly.length; i++) {
+		// accessing the objects date inside the object if the array that is being passed in the function
+		const dayName = getDayName(dataArrWeekly[i].date);
+		// querySelectorAll() returns an iterable nodelist
+		// in order to access the p tag in the nodes we are first accessing each node elements via inforData[i -1]
+		// then we are accessing the e=child nodes which are in an array
+		// p tag being the first elements has the index of 0 hence accessed via children[0]
+		// substring() only extracts the characters within the given index sunday will be shown as -> sun;  where s[0] and d[3]
+		infoData[i - 1].children[0].textContent = dayName.substring(0, 3);
+		infoData[i - 1].children[1].children[0].src = dataArrWeekly[i].day.condition.icon;
+		infoData[i - 1].children[2].innerHTML = dataArrWeekly[i].day.avgtemp_c + "&degC";
+	}
+}
+
+// get the day name from the given date
+function getDayName(dateString) {
+	var date = new Date(dateString);
+	return date.toLocaleDateString("en-US", { weekday: "long" });
 }
