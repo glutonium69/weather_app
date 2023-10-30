@@ -56,9 +56,11 @@ body{
 	gap: var(--gap);
 
 	.nav{
+		overflow: scroll;
 		background-color: #202b3b;
 		flex-grow: 1;
-		min-width: 60px;
+		max-width: 80px;
+		min-width: 70px;
 		height: calc(100vh - var(--side-gap));
 		border-radius: 1rem;
 		position: sticky;
