@@ -499,10 +499,8 @@ body{
 		padding-inline: 0.8rem;
 	}
 
-	.airCondition {
-		.bottomSection {
-			grid-template: 1fr 1fr / 1fr 1fr;
-			
+	#dailyForecast{
+
 			& > div:nth-child(even){
 				display: flex;
 				padding-left: 1rem;
