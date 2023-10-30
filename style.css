@@ -553,6 +553,32 @@ body{
 		grid-column: 1 / 4;
 	}
 
+	#dailyForecast{
+
+		& > p{
+			text-align: center;
+			padding: 0.3rem 0;
+		}
+
+		.data{
+			padding-bottom: 1rem;
+
+			& img{
+				width: 80% !important;
+			}
+		}
+	}
+
+	#airCondition{
+		gap: 1rem;
+		justify-content: flex-start;
+		padding: 2rem;
+
+		.bottomSection{
+			gap: 1rem;
+		}
+	}
+
 	#weeklyForecast {
 		grid-row: 4;
 	}
