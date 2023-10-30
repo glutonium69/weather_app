@@ -593,7 +593,12 @@ body{
 
 		.nav,
 		#searchAndMain {
+
 			min-width: 300px;
+
+			.search{
+				grid-template-rows: 45px;
+			}
 		}
 
 		.nav {
