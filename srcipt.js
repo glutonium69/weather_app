@@ -19,13 +19,14 @@ async function weatherInfo(place) {
 	setPlace(data);
 	setCurrentTempAndCondition(data);
 	dailyForecast(data);
+	airCondition(data);
 
 	// print data and response to console
 	console.log(data);
 	console.log(res);
 }
 
-weatherInfo("russia");
+weatherInfo("india");
 
 
 
@@ -100,4 +101,37 @@ function dailyForecast(data) {
 		holder.innerHTML = temp + "&deg";
 		icons[index].src = icon;
 	});
+}
+
+
+// set air condition
+function airCondition(data) {
+	// extract essential data
+	const realFeel = data.current.feelslike_c;
+	const windSpeed = data.current.wind_kph;
+	const rain = data.forecast.forecastday[0].hour[getHour()].chance_of_rain; // chances of rain vary on different hours of the day hence we need to get the current hour from the user end to get the current chances of rain
+	const uv = data.current.uv;
+
+	// set the real feel
+	const realFeelTag = document.querySelector(".real-feel");
+	realFeelTag.innerHTML = realFeel + "&degC";
+
+	// set wind speed
+	const windSpeedTag = document.querySelector(".wind-speed");
+	windSpeedTag.textContent = windSpeed + "km/h";
+
+	// set chance of rain
+	const rainTag = document.querySelector(".rain-chance");
+	rainTag.textContent = rain + "%";
+
+	// set uv index
+	const uvTag = document.querySelector(".uv-index");
+	uvTag.textContent = uv;
+}
+
+
+// get users current hour
+function getHour() {
+	let date = new Date();
+	return date.getHours();
 }
