@@ -420,7 +420,7 @@ body{
 	.bottomSection{
 		height: 100%;
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template: 1fr 1fr / 1fr 1fr;
 
 		& > div{
 			display: flex;
