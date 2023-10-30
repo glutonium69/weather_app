@@ -398,8 +398,15 @@ body{
 
 .dailyForecast{
 	padding-block: 1.1rem 0.8rem;
+
 	& p{
 		padding-left: var(--side-padding);
+	}
+
+	.info{
+		& p{
+			padding-left: 0;
+		}
 	}
 }
 
