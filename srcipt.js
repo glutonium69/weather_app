@@ -1,4 +1,5 @@
 const weatherAPI_key = "ae3de0fe10a34e07a45212158232510"; // https://www.weatherapi.com
+const userLocationAPI_key = "5bf21f154e084c8d95ea68392c3fc3ea"; // https://apidocs.geoapify.com/docs/ip-geolocation
 
 // get search bar and search icon
 const input = document.querySelector(".search input");
@@ -6,6 +7,20 @@ const searchIcon = document.querySelector(".search .search_icon");
 
 // depending on the length of the place name we will showcase them either in h1 or h2 tag
 let is_place_name_long = false;
+
+
+// when user first enter the page we are getting users location in order to show the user weather data of their location
+async function getUserLocation() {
+	const url = `https://api.geoapify.com/v1/ipinfo?apiKey=${userLocationAPI_key}`;
+
+	const res = await fetch(url);
+	const data = await res.json();
+
+	const location = data.city.name;
+
+	weatherInfo(location);
+}
+getUserLocation();
 
 
 // get weather info using API call and print in console
@@ -39,9 +54,6 @@ async function weatherInfo(place) {
 	console.log(data);
 	console.log(res);
 }
-
-weatherInfo("russia");
-
 
 
 // set the current place name on web
