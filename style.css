@@ -485,7 +485,13 @@ body{
 
 
 /* media query for tablet size device */
-@media screen and (width <= 768px){
+@media screen and (width <= 800px){
+
+	#searchAndMain{
+		.main{
+			grid-template: 130px auto auto / repeat(3, 1fr);
+		}
+	}
 	
 	.dailyForecast,
 	.airCondition,
