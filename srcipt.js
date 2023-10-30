@@ -17,13 +17,14 @@ async function weatherInfo(place) {
 
 	// calling function by passing the data as argument
 	setPlace(data);
+	setCurrentTempAndCondition(data);
 
 	// print data and response to console
 	console.log(data);
 	console.log(res);
 }
 
-weatherInfo("london");
+weatherInfo("sidney");
 
 
 
@@ -50,4 +51,25 @@ function setPlace(data) {
 		place_h2.textContent = "";
 		place_h1.innerHTML = city + ", <br>" + country;
 	}
+}
+
+
+// set the current temp info on the web 
+// sets up the temperature and sets up the tempInfo icon as well 
+function setCurrentTempAndCondition(data) {
+
+	// extract essential data
+	const currentTemp = data.current.temp_c;
+	const currentCondition = data.current.condition.text;
+	const currentConditionIcon = data.current.condition.icon;
+
+	// get related elements
+	const temp_h2 = document.querySelector(".current_temp_h2");
+	const condition = document.querySelector(".current_condition");
+	const img = document.querySelector(".temp img");
+
+	// set up the temp and icon
+	temp_h2.innerHTML = Math.round(currentTemp) + "&degC";
+	condition.textContent = currentCondition;
+	img.src = currentConditionIcon;
 }
