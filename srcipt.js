@@ -174,6 +174,7 @@ searchIcon.addEventListener("click", () => {
 	// return if input is an empty string
 	if (input.value === "") return 0;
 
+	activateLoadingAnimation();
 	setUpWebData();
 });
 
@@ -183,6 +184,7 @@ window.addEventListener("keypress", (e) => {
 	let condition = e.key != "Enter" || (document.activeElement != input && document.activeElement != searchIcon) || input.value === "";
 	if (condition) return 0;
 
+	activateLoadingAnimation();
 	setUpWebData();
 });
 
@@ -190,4 +192,17 @@ window.addEventListener("keypress", (e) => {
 function setUpWebData() {
 	const location = input.value;
 	weatherInfo(location);
+}
+
+
+// activates loading animation
+function activateLoadingAnimation() {
+	const loader = document.getElementById("loader");
+	loader.className = "loader";
+}
+
+// deactivates loading animation
+function deactivateLoadingAnimation() {
+	const loader = document.getElementById("loader");
+	loader.classList.remove("loader");
 }
