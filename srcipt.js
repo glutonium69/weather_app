@@ -206,3 +206,20 @@ function deactivateLoadingAnimation() {
 	const loader = document.getElementById("loader");
 	loader.classList.remove("loader");
 }
+
+
+// show pop up when something goes wrong
+let timeOut = undefined;
+
+function handlePopUp() {
+	const popUp = document.querySelector(".pop-up");
+	popUp.style.display = "block";
+
+	// reset if any on going timeout exists
+	if (timeOut) clearTimeout(timeOut);
+
+	// set a timeout that removes the pop up after 3s
+	timeOut = setTimeout(() => {
+		popUp.style.display = "none";
+	}, 3000);
+}
