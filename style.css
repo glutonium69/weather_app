@@ -426,6 +426,7 @@ body{
 			display: flex;
 			align-items: center;
 			gap: var(--gap);
+			padding-left: 1.5rem;
 
 			& div{
 				height: 40%;
