@@ -18,13 +18,14 @@ async function weatherInfo(place) {
 	// calling function by passing the data as argument
 	setPlace(data);
 	setCurrentTempAndCondition(data);
+	dailyForecast(data);
 
 	// print data and response to console
 	console.log(data);
 	console.log(res);
 }
 
-weatherInfo("sidney");
+weatherInfo("russia");
 
 
 
@@ -72,4 +73,31 @@ function setCurrentTempAndCondition(data) {
 	temp_h2.innerHTML = Math.round(currentTemp) + "&degC";
 	condition.textContent = currentCondition;
 	img.src = currentConditionIcon;
+}
+
+
+// set daily forecast
+function dailyForecast(data) {
+	
+	// extract essential data
+	const dataHourArray = data.forecast.forecastday[0].hour;
+	// get related elements as node list
+	const placeHolders = document.querySelectorAll(".dailyForecast .data h3");
+	const icons = document.querySelectorAll(".dailyForecast .data img");
+
+	// we r getting todays temp on these times
+	// 6 -> 6:00 AM || 18 -> 6:00 PM
+	const hours = [6, 9, 12, 15, 18, 21];
+
+	// iterate through the node list
+	placeHolders.forEach((holder, index) => {
+		// hours are arranged corresponding to the index in the array eg : hour[15] -> 15:00 / 3:00 PM
+		// using the index of the placeholder we r getting which hour we are currently updating
+		// using that hour as the index we r getting the temp of that hour
+		const temp = dataHourArray[hours[index]].temp_c;
+		const icon = dataHourArray[hours[index]].condition.icon;
+		// set up temp and icon
+		holder.innerHTML = temp + "&deg";
+		icons[index].src = icon;
+	});
 }
