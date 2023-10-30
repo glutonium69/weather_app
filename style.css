@@ -501,9 +501,22 @@ body{
 
 	#dailyForecast{
 
-			& > div:nth-child(even){
-				display: flex;
-				padding-left: 1rem;
+		.info{
+			padding: 0;
+			display: grid;
+			place-items: center;
+			grid-template-columns:1fr 1fr 1fr;
+			gap: 1rem;
+
+			& > div:not(.data){
+				display: none;
+			}
+
+			.data{
+
+				& img{
+					width: 50%;
+				}
 			}
 		}
 	}
