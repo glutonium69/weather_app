@@ -83,10 +83,6 @@ body{
 				margin-inline: auto;
 			}
 
-			& span{
-				flex-grow: 1;
-			}
-			
 			.weather,
 			.cities,
 			.map,
@@ -289,9 +285,10 @@ body{
 		margin-left: var(--side-margin);
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 	
-		& span{
-			flex-grow: 1;
+		& div > *{
+			margin-left: 0;
 		}
 		
 		& h1{
