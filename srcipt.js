@@ -1,5 +1,8 @@
 const weatherAPI_key = "ae3de0fe10a34e07a45212158232510"; // https://www.weatherapi.com
 
+// get search bar and search icon
+const input = document.querySelector(".search input");
+const searchIcon = document.querySelector(".search .search_icon");
 
 // depending on the length of the place name we will showcase them either in h1 or h2 tag
 let is_place_name_long = false;
