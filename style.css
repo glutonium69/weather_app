@@ -658,7 +658,7 @@ body{
 					}
 				}
 
-				& > .icon {
+				> .icon {
 					border-radius: 0.45rem;
 					min-width: 35px;
 					max-width: 35px;
