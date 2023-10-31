@@ -53,9 +53,12 @@ async function weatherInfo(place) {
 	airCondition(data);
 	weeklyForecast(data);
 
+    // empty the search bar when data is returned and shown on the web after searching
+    input.value = "";
+
 	// print data and response to console
-	console.log(data);
-	console.log(res);
+	// console.log(data);
+	// console.log(res);
 }
 
 
