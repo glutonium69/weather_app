@@ -97,7 +97,7 @@ function setCurrentTempAndCondition(data) {
 	const img = document.querySelector(".temp img");
 
 	// set up the temp and icon
-	temp_h2.innerHTML = Math.round(currentTemp) + "&degC";
+	temp_h2.innerHTML = Math.round(currentTemp) + " &degC";
 	condition.textContent = currentCondition;
 	img.src = currentConditionIcon;
 }
@@ -124,7 +124,7 @@ function dailyForecast(data) {
 		const temp = dataHourArray[hours[index]].temp_c;
 		const icon = dataHourArray[hours[index]].condition.icon;
 		// set up temp and icon
-		holder.innerHTML = temp + "&deg";
+		holder.innerHTML = Math.round(temp) + " &degC";
 		icons[index].src = icon;
 	});
 }
@@ -140,15 +140,15 @@ function airCondition(data) {
 
 	// set the real feel
 	const realFeelTag = document.querySelector(".real-feel");
-	realFeelTag.innerHTML = realFeel + "&degC";
+	realFeelTag.innerHTML = Math.round(realFeel) + " &degC";
 
 	// set wind speed
 	const windSpeedTag = document.querySelector(".wind-speed");
-	windSpeedTag.textContent = windSpeed + "km/h";
+	windSpeedTag.textContent = windSpeed + " km/h";
 
 	// set chance of rain
 	const rainTag = document.querySelector(".rain-chance");
-	rainTag.textContent = rain + "%";
+	rainTag.textContent = rain + " %";
 
 	// set uv index
 	const uvTag = document.querySelector(".uv-index");
@@ -180,7 +180,7 @@ function weeklyForecast(data) {
 		// substring() only extracts the characters within the given index sunday will be shown as -> sun;  where s[0] and d[3]
 		infoData[i - 1].children[0].textContent = dayName.substring(0, 3);
 		infoData[i - 1].children[1].children[0].src = dataArrWeekly[i].day.condition.icon;
-		infoData[i - 1].children[2].innerHTML = dataArrWeekly[i].day.avgtemp_c + "&degC";
+		infoData[i - 1].children[2].innerHTML = Math.round(dataArrWeekly[i].day.avgtemp_c) + " &degC";
 	}
 }
 
