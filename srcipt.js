@@ -53,8 +53,8 @@ async function weatherInfo(place) {
 	airCondition(data);
 	weeklyForecast(data);
 
-    // empty the search bar when data is returned and shown on the web after searching
-    input.value = "";
+	// empty the search bar when data is returned and shown on the web after searching
+	input.value = "";
 
 	// print data and response to console
 	// console.log(data);
@@ -85,6 +85,9 @@ function setPlace(data) {
 		place_h2.textContent = "";
 		place_h1.innerHTML = city + ", <br>" + country;
 	}
+
+	// set the place name as input placeholder
+	input.placeholder = text;
 }
 
 

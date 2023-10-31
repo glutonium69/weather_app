@@ -225,7 +225,7 @@ body{
 				font-size: clamp(0.625rem, 0.179rem + 1.19vw, 1.25rem);
 	
 				&::placeholder {
-					color: rgb(218, 217, 217);
+					color: rgba(179, 177, 177, 0.555);
 				}
 			}	
 
