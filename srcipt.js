@@ -251,6 +251,13 @@ function handlePopUp() {
 
 // show under development pop-up
 let timeOutTwo = undefined;
+// getting all under development elements
+const elementsUnderDevelopment = document.querySelectorAll(".under-development");
+// iterating through them
+elementsUnderDevelopment.forEach( element => {
+	// adding click listener to them and running corresponding function when they are clicked
+	element.onclick = underDevPopUp;
+})
 
 function underDevPopUp() {
 	// get the pop up element
