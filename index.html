@@ -15,51 +15,61 @@
 	<span class="under-development-pop-up">Under development</span>
 	<div id="loader"></div>
 	<div class="wrapper">
-		<div class="nav">
+		<nav class="nav">
 			<div class="container">
-				<div class="icon">
-					<img src="icon/nav/nav-icon.svg" alt="">
-				</div>
+				<a href="">
+					<div class="icon">
+						<img src="icon/nav/nav-icon.svg" alt="">
+					</div>
+				</a>
 				<div>
-					<div tabindex="0" class="weather under-development">
-						<div class="icon">
-							<img src="icon/nav/weather-icon.svg" alt="">
+					<a href="#">
+						<div tabindex="0" class="weather under-development">
+							<div class="icon">
+								<img src="icon/nav/weather-icon.svg" alt="">
+							</div>
+							<p>weather</p>
 						</div>
-						<p>weather</p>
-					</div>
+					</a>
 					
-					<div tabindex="0" class="cities under-development">
-						<div class="icon">
-							<img src="icon/nav/cities.svg" alt="">
+					<a href="#">
+						<div tabindex="0" class="cities under-development">
+							<div class="icon">
+								<img src="icon/nav/cities.svg" alt="">
+							</div>
+							<p>cities</p>
 						</div>
-						<p>cities</p>
-					</div>
+					</a>
 					
-					<div tabindex="0" class="map under-development">
-						<div class="icon">
-							<img src="icon/nav/map.svg" alt="">
+					<a href="#">
+						<div tabindex="0" class="map under-development">
+							<div class="icon">
+								<img src="icon/nav/map.svg" alt="">
+							</div>
+							<p>map</p>
 						</div>
-						<p>map</p>
-					</div>
-					
-					<div tabindex="0" class="settings under-development">
-						<div class="icon">
-							<img src="icon/nav/settings.svg" alt="">
+					</a>
+										
+					<a href="#">
+						<div tabindex="0" class="settings under-development">
+							<div class="icon">
+								<img src="icon/nav/settings.svg" alt="">
+							</div>
+							<p>settings</p>
 						</div>
-						<p>settings</p>
-					</div>
+					</a>
 				</div>
 			</div>
-		</div>
-		<div class="searchAndMain" id="searchAndMain">
-			<div class="search">
+		</nav>
+		<main class="searchAndMain" id="searchAndMain">
+			<section class="search">
 				<input type="text" autofocus placeholder="Search for cities">
 				<div class="search_icon" tabindex="0">
 					<img src="icon/search/search-icon.svg" alt="">
 				</div>
 				<span class="pop-up">OOPS ;-; <br> something went wrong <br> check if the input is right</span>
-			</div>
-			<div class="main">
+			</section>
+			<section class="main">
 				<div class="temp" id="temp">
 					<div class="tempInfo">
 						<h1 class="place_h1">Paris, <br> France</h1>
@@ -221,8 +231,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</section>
+		</main>
 	</div>
 </body>
 
