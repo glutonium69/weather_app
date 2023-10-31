@@ -19,6 +19,9 @@ async function getUserLocation() {
 	const location = data.city.name;
 
 	weatherInfo(location);
+
+	console.log(res);
+	console.log(data);
 }
 getUserLocation();
 
