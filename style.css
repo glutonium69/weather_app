@@ -21,6 +21,28 @@ body{
 	min-height: 100vh;
 }
 
+.under-development-pop-up{
+	position: absolute;
+	color: #2feb83;
+	background-color:black;
+	padding: 0.5rem 1rem;
+
+	&::before {
+		--border-width: 15px;
+
+		content: "";
+		position: absolute;
+		height: 0;
+		width: 0;
+		border-right: solid var(--border-width) transparent;
+		border-bottom: solid var(--border-width) black;
+		top: 0;
+		left: 10%;
+		translate: 0 -95%;
+	}
+}
+
+
 #loader{
 	position: fixed;
 	top: 0;
