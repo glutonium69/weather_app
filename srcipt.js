@@ -248,3 +248,24 @@ function handlePopUp() {
 		popUp.style.display = "none";
 	}, 3000);
 }
+
+// show under development pop-up
+let timeOutTwo = undefined;
+
+function underDevPopUp() {
+	// get the pop up element
+	const popUp = document.querySelector(".under-development-pop-up");
+	// make it appear on the screen
+	popUp.style.opacity = 1;
+	popUp.style.setProperty("--translate-y", "0%");
+
+	// reset if any on going timeout exists
+	if (timeOutTwo) clearTimeout(timeOutTwo);
+
+	// set a timeout that removes the pop up after 3s
+	timeOutTwo = setTimeout(() => {
+		// make it disappear from the screen
+		popUp.style.opacity = 0;
+		popUp.style.setProperty("--translate-y", "-100%");
+	}, 2000);
+}
