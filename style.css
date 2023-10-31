@@ -88,8 +88,14 @@ body{
 			margin-block: 1.5rem;
 			display: flex;
 			flex-direction: column;
-			align-items: center;
-			gap: 1.5rem;
+			gap: 3rem;
+
+			& div:has(.map){
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 1.5rem;
+			}
 			
 			.icon{
 				width: 65%;
@@ -105,8 +111,10 @@ body{
 			.cities,
 			.map,
 			.settings{
+				width: calc(100% - 1rem);
 				aspect-ratio: 1;
 				display: grid;
+				place-items: center;
 				gap: 0.2rem;
 				border-radius: 0.8rem;
 
@@ -148,13 +156,10 @@ body{
 				}
 
 				.icon{
-					width: 100%;
+					padding: 0;
+					width: 50%;
 					background-color: transparent;
 					border-radius: 0;
-					
-					& img{
-						width: 25px;
-					}
 				}
 			}
 		}
@@ -630,13 +635,21 @@ body{
 		}
 
 		.nav {
-			height: fit-content;
+			height: 50px;
 			position: static;
 			border-radius: 0.7rem;
 
 			.container {
 				flex-direction: row;
-				margin: 0.1rem 0.5rem;
+				justify-content: space-between;
+				align-items: center;
+				margin: 0 0.5rem;
+				height: 100%;
+
+				& div:has(.map){
+					flex-direction: row;
+					width: fit-content;
+				}
 
 				& p{
 					&::before,
@@ -651,21 +664,16 @@ body{
 					margin: 0;
 				}
 
-				& span {
-					flex-grow: 1;
-				}
-
 				.weather,
 				.cities,
 				.map,
 				.settings {
+					
+					height: 45px;
+					gap: 0;
 
-					.icon {
-						min-width: 10px;
-					}
-
-					& img {
-						max-width: 15px !important;
+					.icon{
+						width: 35%;
 					}
 				}
 			}
