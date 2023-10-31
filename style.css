@@ -22,24 +22,20 @@ body{
 }
 
 .under-development-pop-up{
-	position: absolute;
-	color: #2feb83;
-	background-color:black;
-	padding: 0.5rem 1rem;
+	--translate-y : -100%;
 
-	&::before {
-		--border-width: 15px;
-
-		content: "";
-		position: absolute;
-		height: 0;
-		width: 0;
-		border-right: solid var(--border-width) transparent;
-		border-bottom: solid var(--border-width) black;
-		top: 0;
-		left: 10%;
-		translate: 0 -95%;
-	}
+	text-align: center;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	color: #d2e6db;
+	background-color:rgb(126, 68, 68);
+	padding-block: 0.8rem;
+	z-index: 999;
+	opacity: 0;
+	translate: 0 var(--translate-y);
+	transition: opacity 300ms, translate 200ms;
 }
 
 
