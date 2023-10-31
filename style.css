@@ -620,6 +620,13 @@ body{
 				flex-direction: row;
 				margin: 0.1rem 0.5rem;
 
+				& p{
+					&::before,
+					&::after{
+						display: none;
+					}
+				}
+
 				.icon {
 					border-radius: 0.45rem;
 					width: 30px;
