@@ -80,8 +80,12 @@ body{
 		min-width: 70px;
 		height: calc(100vh - var(--side-gap));
 		border-radius: 1rem;
-		position: sticky;
+		position: sticky;    
 		top: var(--side-gap);
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
 		
 		.container{
 			margin-block: 1.5rem;
