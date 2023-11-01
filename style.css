@@ -685,3 +685,12 @@ body{
 		}
 	}
 }
+
+
+@media screen and (height < 465px) {
+	.nav{
+		position: static !important;
+		height: auto !important;
+		flex-grow: 1 !important;
+	}
+}
